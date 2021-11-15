@@ -1,4 +1,4 @@
-## Office sales
+# Office sales
 
 This example was made to demonstrate basic knowledge of web scraping, working with data and the basics of working with a database.
 
@@ -9,7 +9,7 @@ This example was made to demonstrate basic knowledge of web scraping, working wi
 
 Scrape table **Office Supply Sales Table** from [https://www.contextures.com/xlsampledata01.html](https://www.contextures.com/xlsampledata01.html)
 
-As output can be used any data type (dict, list, Pandas DataFrame …)
+>As output can be used any data type (dict, list, Pandas DataFrame …)
 
 ### 2. Calculations
 
@@ -26,6 +26,7 @@ Prepare output and save data into database.
 - Save only:
 -- Region, Rep, Item, Units, Total discount, Final price, Creation date, Order date
 
-Final price is based on step 2. Final price = total price with all calculated discounts.
-Total discount is summary of unit discount and extra discount.
-Creation date is actual DateTime.
+
+>Final price is based on step 2, where final price is total price with all calculated discounts.<br />
+>Total discount is summary of unit discount and extra discount.<br />
+>Creation date is actual DateTime.
