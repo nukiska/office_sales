@@ -5,9 +5,12 @@ from selenium.webdriver.common.by import By
 
 def display_scraped_table():
     """Procedure displays scraped HTML table as DataFrame object using Pandas"""
-    import pandas
-    data_frame = pandas.read_html('https://www.contextures.com/xlsampledata01.html')
-    print(data_frame[0])
+    import pandas as pd
+    import requests
+    r = requests.get('https://www.contextures.com/xlsampledata01.html')
+    r.status_code
+    tables = pd.read_html(r.text)
+    print(tables[0])
 
 
 def get_scraped_table() -> list:
@@ -32,3 +35,12 @@ def get_scraped_table() -> list:
 
     except Exception:
         return []
+
+    finally:
+        for row in rows_list:
+            print(row)
+
+
+if __name__ == '__main__':
+    # display_scraped_table()
+    get_scraped_table()
