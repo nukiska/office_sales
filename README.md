@@ -39,4 +39,4 @@ Creation date is actual DateTime.
 >- each sales representative is assigned one region
 >- only one order of one item by one rep in one day is registered
 >- one item can be ordered by more than one rep and one rep can order more items
->- between sellers, regions, and items, there are not two of the same name 
+>- between reps, regions, and items, there are not two of the same name 
