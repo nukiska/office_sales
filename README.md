@@ -27,6 +27,16 @@ Prepare output and save data into database.
 -- Region, Rep, Item, Units, Total discount, Final price, Creation date, Order date
 
 
->Final price is based on step 2, where final price is total price with all calculated discounts.<br />
->Total discount is summary of unit discount and extra discount.<br />
->Creation date is actual DateTime.
+Final price is based on step 2, where final price is total price with all calculated discounts.<br />
+Total discount is summary of unit discount and extra discount.<br />
+Creation date is actual DateTime.
+<br />
+<br />
+
+>## NOTE
+>I wrote the code for this one specific example, with regard to the individual steps and the given table from the mentioned website.<br />
+>The database I designed with the assumptions that:
+>- each sales representative is assigned one region
+>- only one order of one item by one rep in one day is registered
+>- one item can be ordered by more than one rep and one rep can order more items
+>- between sellers, regions, and items, there are not two of the same name 
