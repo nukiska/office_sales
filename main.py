@@ -12,7 +12,6 @@ def display_scraped_table():
     import pandas as pd
     import requests
     r = requests.get('https://www.contextures.com/xlsampledata01.html')
-    r.status_code
     tables = pd.read_html(r.text)
     print(tables[0])
 
