@@ -40,10 +40,6 @@ def get_scraped_table() -> list:
     except Exception:
         return []
 
-    finally:
-        for row in rows_list:
-            print(row)
-
 
 def main() -> list:
     """
@@ -96,7 +92,7 @@ def main() -> list:
                 total_discount = unit_discount * units + extra_discount
                 final_price = total_price - total_discount
 
-                new_row_tuple = (order_date, region, rep, item, units, total_discount, final_price)
+                new_row_tuple = (order_date, region, rep, item, units, '%.2f' % total_discount, '%.2f' % final_price)
                 new_rows_list.append(new_row_tuple)
 
                 execute_insert_queries(db, region, item, rep, units, order_date, final_price, total_discount)
