@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office sales</title>
+    <style>
+        div {
+            max-width: 800px;
+            margin: auto;
+            background-color: aliceblue;
+             -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+
+        }
+        table {
+          border: 1px solid #1C6EA4;
+          background-color: #EEEEEE;
+          width: 100%;
+          text-align: left;
+          border-collapse: collapse;
+        }
+        table td, table.blueTable th {
+          border: 1px solid #AAAAAA;
+          padding: 3px 2px;
+        }
+        table tbody td {
+          font-size: 13px;
+        }
+        table tr:nth-child(even) {
+          background: #D0E4F5;
+        }
+        table thead {
+          background: #1C6EA4;
+          background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+          background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+          background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+          border-bottom: 2px solid #444444;
+        }
+        table thead th {
+          font-size: 15px;
+          font-weight: bold;
+          color: #FFFFFF;
+          border-left: 2px solid #D0E4F5;
+        }
+        table thead th:first-child {
+          border-left: none;
+        }
+
+        table tfoot td {
+          font-size: 14px;
+        }
+        table tfoot .links {
+          text-align: right;
+        }
+        table tfoot .links a{
+          display: inline-block;
+          background: #1C6EA4;
+          color: #FFFFFF;
+          padding: 2px 8px;
+          border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+            font-family: Verdana, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div>
+<h1>Office sales</h1>
+{% if data %}
+  <table style="text-align: center">
+      <thead>
+        <tr style="font-weight: bold;">
+            <td>Order Date</td>
+            <td>Region</td>
+            <td>Rep</td>
+            <td>Item</td>
+            <td>Quantity</td>
+            <td>Total Discount</td>
+            <td>Final Price</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in data %}
+        <tr>
+            <td>{{d.0}}</td>
+            <td>{{d.1}}</td>
+            <td>{{d.2}}</td>
+            <td>{{d.3}}</td>
+            <td>{{d.4}}</td>
+            <td>{{d.5}}</td>
+            <td>{{d.6}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+{% else %}
+<h3>Data is mising</h3>
+{% endif %}
+</div>
+</body>
+</html>
